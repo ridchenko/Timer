@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.example.timer.databinding.ActivityMainBinding
 import com.example.timer.databinding.FragmentStopwatchBinding
 
 class Stopwatch: Fragment(R.layout.fragment_stopwatch) {
@@ -17,6 +18,7 @@ class Stopwatch: Fragment(R.layout.fragment_stopwatch) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentStopwatchBinding.inflate(layoutInflater)
 
         val handler = Handler(Looper.getMainLooper())
 

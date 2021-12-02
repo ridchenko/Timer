@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        bindingActionBar = FragmentActionBarBinding.inflate(layoutInflater)
         setDefaultFragment()
 
         setContentView(binding.root)
@@ -38,5 +39,7 @@ class MainActivity : AppCompatActivity() {
                 replace(R.id.fragmentContainer, Timer())
             }
         }
+
+
     }
 }
